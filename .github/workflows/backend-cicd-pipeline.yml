@@ -33,7 +33,7 @@ jobs:
         ECR_REPOSITORY: backend
         IMAGE_TAG: ${{ env.image-tag }}
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./Week6/3-tier-msa/backend
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./Chapter7/Ch7-4/3-tier-msa/backend
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
   update-argocd-backend-metadata:
